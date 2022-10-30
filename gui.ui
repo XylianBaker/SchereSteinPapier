@@ -89,6 +89,9 @@
        </widget>
       </item>
       <item>
+       <widget class="QComboBox" name="move"/>
+      </item>
+      <item>
        <widget class="QLabel" name="computer_score">
         <property name="text">
          <string>0</string>
@@ -107,12 +110,9 @@
        </widget>
       </item>
       <item>
-       <widget class="QSpinBox" name="move"/>
-      </item>
-      <item>
        <widget class="QPushButton" name="pB_execute">
         <property name="text">
-         <string>Asuführen</string>
+         <string>Ausführen</string>
         </property>
        </widget>
       </item>
