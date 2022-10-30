@@ -38,5 +38,11 @@ class View(QMainWindow):
     def set_text_computer_score(self, text: str) -> None:
         self.computer_score.setText(text)
 
+    def set_text_player_move(self, text: str) -> None:
+        self.player_move.setText(text)
+
+    def set_text_computer_move(self, text: str) -> None:
+        self.computer_move.setText(text)
+
     def get_player_move(self) -> str:
         return self.move.currentText()
