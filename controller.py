@@ -28,7 +28,7 @@ class Controller:
             self.view.set_text_computer_score(self.model.get_computer_score())
             self.view.set_text_statusbar('Computer gewinnt')
         self.model.set_round(self.model.get_round() + 1)
-        self.view.set_text_round(self.model.get_round())
+        self.view.set_text_round(str(self.model.get_round()))
 
     def reset(self):
         self.model.set_round(1)
