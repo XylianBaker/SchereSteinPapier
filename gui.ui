@@ -35,7 +35,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="currentRound">
+       <widget class="QLabel" name="round">
         <property name="text">
          <string>0</string>
         </property>
@@ -46,14 +46,14 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="player_move">
         <property name="text">
          <string>Spielzug des Players</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="computer_move">
         <property name="text">
          <string>Spielzug des Computers</string>
         </property>
@@ -82,14 +82,14 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
-       <widget class="QLabel" name="selection_player">
+       <widget class="QLabel" name="player_score">
         <property name="text">
          <string>0</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="selection_computer">
+       <widget class="QLabel" name="computer_score">
         <property name="text">
          <string>0</string>
         </property>
