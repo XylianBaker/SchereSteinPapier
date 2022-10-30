@@ -1,4 +1,6 @@
 # View for the qt gui for the rock paper scissors game
+# Authors: Jan Kammellander
+# Date: 30.10.2022 Version: 1.0
 
 from PyQt6.QtWidgets import *
 from PyQt6 import uic
