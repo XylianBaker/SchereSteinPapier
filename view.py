@@ -13,7 +13,6 @@ class View(QMainWindow):
 
     def __init__(self, c: Controller):
         super().__init__()
-        self.setWindowTitle("Rock Paper Scissors")
         uic.loadUi("gui.ui", self)
         self.move.addItems(['rock', 'paper', 'scissors'])
         self.pB_execute.clicked.connect(c.execute)
