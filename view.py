@@ -52,23 +52,23 @@ class View(QMainWindow):
 
     def set_image_player_move(self, move: str) -> None:
         if move == 'rock':
-            self.player_move.setPixmap(QPixmap('rock.png'))
+            self.player_move.setPixmap(QPixmap('./images/rock.png'))
         elif move == 'paper':
-            self.player_move.setPixmap(QPixmap('paper.png'))
+            self.player_move.setPixmap(QPixmap('./images/paper.png'))
         else:
-            self.player_move.setPixmap(QPixmap('scissors.png'))
+            self.player_move.setPixmap(QPixmap('./images/scissors.png'))
 
     def set_image_computer_move(self, move: str) -> None:
         if move == 'rock':
-            self.computer_move.setPixmap(QPixmap('rock.png'))
+            self.computer_move.setPixmap(QPixmap('./images/rock.png'))
         elif move == 'paper':
-            self.computer_move.setPixmap(QPixmap('paper.png'))
+            self.computer_move.setPixmap(QPixmap('./images/paper.png'))
         else:
-            self.computer_move.setPixmap(QPixmap('scissors.png'))
+            self.computer_move.setPixmap(QPixmap('./images/scissors.png'))
 
     def set_image_tie(self) -> None:
-        self.player_move.setPixmap(QPixmap('tie.png'))
-        self.computer_move.setPixmap(QPixmap('tie.png'))
+        self.player_move.setPixmap(QPixmap('./images/tie.png'))
+        self.computer_move.setPixmap(QPixmap('./images/tie.png'))
 
     def reset_images(self) -> None:
         self.player_move.setPixmap(QPixmap(''))

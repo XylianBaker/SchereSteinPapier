@@ -17,8 +17,9 @@ class Controller:
     def execute(self):
         self.model.set_player_move(self.view.get_player_move())
         self.model.set_computer_move(self.model.get_computer_move())
-        self.view.set_text_player_move(self.model.get_player_move())
-        self.view.set_text_computer_move(self.model.get_computer_move())
+        # self.view.set_text_player_move(self.model.get_player_move())
+        # self.view.set_text_computer_move(self.model.get_computer_move())
+        self.view.set_image(self.model.get_player_move(), self.model.get_computer_move())
         if self.model.is_tie():
             self.view.set_text_statusbar('Unentschieden')
         elif self.model.is_player_winner():
