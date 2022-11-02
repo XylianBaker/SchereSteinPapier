@@ -1,7 +1,7 @@
 # View for the qt gui for the rock paper scissors game
 # Authors: Jan Kammellander
 # Date: 30.10.2022 Version: 1.0
-
+from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import *
 from PyQt6 import uic
 
@@ -10,6 +10,8 @@ from controller import Controller
 
 class View(QMainWindow):
     move: QComboBox
+    player_move: QLabel
+    computer_move: QLabel
 
     def __init__(self, c: Controller):
         super().__init__()
@@ -47,3 +49,34 @@ class View(QMainWindow):
 
     def get_player_move(self) -> str:
         return self.move.currentText()
+
+    def set_image_player_move(self, move: str) -> None:
+        if move == 'rock':
+            self.player_move.setPixmap(QPixmap('rock.png'))
+        elif move == 'paper':
+            self.player_move.setPixmap(QPixmap('paper.png'))
+        else:
+            self.player_move.setPixmap(QPixmap('scissors.png'))
+
+    def set_image_computer_move(self, move: str) -> None:
+        if move == 'rock':
+            self.computer_move.setPixmap(QPixmap('rock.png'))
+        elif move == 'paper':
+            self.computer_move.setPixmap(QPixmap('paper.png'))
+        else:
+            self.computer_move.setPixmap(QPixmap('scissors.png'))
+
+    def set_image_tie(self) -> None:
+        self.player_move.setPixmap(QPixmap('tie.png'))
+        self.computer_move.setPixmap(QPixmap('tie.png'))
+
+    def reset_images(self) -> None:
+        self.player_move.setPixmap(QPixmap(''))
+        self.computer_move.setPixmap(QPixmap(''))
+
+    def set_image(self, move_player: str, move_computer: str) -> None:
+        self.reset_images()
+        self.set_image_player_move(move_player)
+        self.set_image_computer_move(move_computer)
+        if move_player == move_computer:
+            self.set_image_tie()
